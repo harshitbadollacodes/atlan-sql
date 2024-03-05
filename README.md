@@ -4,12 +4,14 @@ SQL Query App built using React on the frontend and styled using styled-componen
 
 Please note that the dummy data was obtained from https://www.mockaroo.com/
 
-# Deployed link
+## Deployed link
 
 I have deployed the app on Vercel and here is the link
 https://atlan-sql-kappa.vercel.app/
 
 ## Walkthrough Video
+
+[Click me to see the loom recording](https://www.loom.com/share/6d90051669b543c58baa0352f0329c02?sid=bd2c7d3f-bed5-4447-a073-49ebdc17c2e7)
 
 ## Tech: Libraries and framework
 
@@ -25,9 +27,14 @@ https://atlan-sql-kappa.vercel.app/
 - Used least dependencies for creating the whole app thereby leading to smaller js bundles.
 - Hosted on Vercel which provides CDN and caching benefits and also every code change pushed to github triggers an automatic deployment. Other benefits are SSL certificate ensuring that application is served over HTTPS.
 
+## Screenshot
+
+![Screenshot of SQL Query app](/images/sql-query-app-1.png)
+![Screenshot of SQL Query app](/images/sql-query-app-2.png)
+
 ## Available Scripts
 
-In the project directory, you can run:
+Clone the repository and open up in any code editor and then you can run:
 
 ### `npm start`
 
