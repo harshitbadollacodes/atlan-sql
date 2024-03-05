@@ -1,5 +1,5 @@
 import { RunQueryMessageContainer } from "./runQueryMessageStyles";
-import sqlImage from "../../assets/sql-injection.png";
+import sqlImage from "../../assets/sql-injection.webp";
 
 const RunQueryMessage = () => {
   return (
