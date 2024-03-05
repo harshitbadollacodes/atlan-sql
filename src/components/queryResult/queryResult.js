@@ -1,7 +1,12 @@
+import { lazy, Suspense } from "react";
 import { useQueryContext } from "../../context/queryContext";
-import QueryResultTable from "../queryResultTable/queryResultTable";
+
 import RunQueryMessage from "../runQueryMessage/runQueryMessage";
 import { QueryResultContainer } from "./queryResultStyles";
+
+const QueryResultTable = lazy(() =>
+  import("../queryResultTable/queryResultTable")
+);
 
 const QueryResult = () => {
   const { queryState } = useQueryContext();
@@ -10,7 +15,9 @@ const QueryResult = () => {
   return (
     <QueryResultContainer>
       {queryData.length > 0 ? (
-        <QueryResultTable queryData={queryData} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <QueryResultTable queryData={queryData} />
+        </Suspense>
       ) : (
         <RunQueryMessage />
       )}

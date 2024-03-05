@@ -5,7 +5,7 @@ export const RecentQueriesContainer = styled.div`
   cursor: pointer;
 `;
 
-export const RecentQueriesDiv = styled.div`
+export const RecentQueriesListContainer = styled.div`
   max-height: 10rem;
   overflow-y: auto;
   display: flex;
