@@ -21,6 +21,7 @@ https://atlan-sql-kappa.vercel.app/
 ## Page Load Time and Optimisation
 
 - Used lighthouse from the chrome dev tools and the performance score is 100😄
+- Prevent CLP by specifying width and height for images.
 - Lazy loaded components which are not required in the initial page load.
 - Used WebP image format.
 - Reusable code wherever possible so that DRY principle is maintained.
