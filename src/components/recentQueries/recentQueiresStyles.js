@@ -10,3 +10,9 @@ export const RecentQueriesDiv = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const QueryButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

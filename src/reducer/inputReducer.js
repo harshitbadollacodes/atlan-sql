@@ -27,6 +27,12 @@ export const inputReducer = (state, action) => {
         queryInput: "",
       };
 
+    case ActionTypes.REMOVE_RECENT_QUERY:
+      return {
+        ...state,
+        recentQueries: state.recentQueries.filter((query) => query !== payload),
+      };
+
     default:
       return state;
   }

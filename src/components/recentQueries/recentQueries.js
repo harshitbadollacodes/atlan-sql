@@ -1,7 +1,9 @@
 import { ActionTypes } from "../../actionTypes/actionTypes";
+import { TrashIconSvg } from "../../assets/svg/trashIconSvg";
 import { useInputContext } from "../../context/inputContext";
 import { PrimaryBtn } from "../button/primaryButtonStyles";
 import {
+  QueryButtonContainer,
   RecentQueriesContainer,
   RecentQueriesDiv,
 } from "./recentQueiresStyles";
@@ -11,8 +13,20 @@ const RecentQueries = () => {
   const { recentQueries } = inputState;
 
   const queryHandler = (e) => {
+    if (e.target.dataset.query) {
+      inputDispatch({
+        type: ActionTypes.UPDATE_INPUT,
+        payload: e.target.dataset.query,
+      });
+    }
+
+    return;
+  };
+
+  const removeQueryHandler = (e) => {
+    console.log("I ma gere", e.target.dataset.query);
     inputDispatch({
-      type: ActionTypes.UPDATE_INPUT,
+      type: ActionTypes.REMOVE_RECENT_QUERY,
       payload: e.target.dataset.query,
     });
   };
@@ -23,7 +37,12 @@ const RecentQueries = () => {
       {!recentQueries.length && <p>No recent queries</p>}
       <RecentQueriesDiv onClick={queryHandler}>
         {recentQueries.map((query) => (
-          <PrimaryBtn data-query={query}>{query}</PrimaryBtn>
+          <QueryButtonContainer key={query}>
+            <PrimaryBtn data-query={query}>{query}</PrimaryBtn>
+            <div onClick={removeQueryHandler} data-query={query}>
+              <TrashIconSvg data-query={query} />
+            </div>
+          </QueryButtonContainer>
         ))}
       </RecentQueriesDiv>
     </RecentQueriesContainer>

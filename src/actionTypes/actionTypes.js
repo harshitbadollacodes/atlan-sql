@@ -5,4 +5,5 @@ export const ActionTypes = {
   UPDATE_INPUT: "Update Input",
   CLEAR_QUERY_OUTPUT: "Clear Query Output",
   UPDATE_RECENT_QUERY_LIST: "Update Recent Query list",
+  REMOVE_RECENT_QUERY: "Remove Recent Query",
 };
