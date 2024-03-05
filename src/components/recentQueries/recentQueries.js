@@ -24,7 +24,6 @@ const RecentQueries = () => {
   };
 
   const removeQueryHandler = (e) => {
-    console.log("I ma gere", e.target.dataset.query);
     inputDispatch({
       type: ActionTypes.REMOVE_RECENT_QUERY,
       payload: e.target.dataset.query,

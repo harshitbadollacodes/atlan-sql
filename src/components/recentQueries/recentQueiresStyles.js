@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const RecentQueriesContainer = styled.div`
   margin-top: 5rem;
+  cursor: pointer;
 `;
 
 export const RecentQueriesDiv = styled.div`
